@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Join the SŌL Whitelist</title>
+
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+
+
+<style>
+
+  :root{--bg:#0d1b2a;--overlay-dark:rgba(13,27,42,0.8);--accent:#c6a664;--accent-hover:#d8b96f;--text-light:#f8f6f2;--font-body:'Inter',sans-serif;--font-head:'Playfair Display',serif;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text-light);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:1rem;}
+.form-container{background:var(--overlay-dark);backdrop-filter:blur(12px);border-radius:16px;max-width:480px;width:100%;padding:2.5rem 2rem;box-shadow:0 0 25px rgba(198,166,100,0.2);animation:fadeIn 0.8s ease;}
+h1{font-family:var(--font-head);font-weight:700;font-size:1.8rem;margin-bottom:1.5rem;color:var(--accent);text-align:center;}
+label{display:block;margin-top:1rem;font-size:0.9rem;color:var(--accent-hover);}
+input,textarea,select{width:100%;margin-top:0.25rem;padding:0.6rem 0.8rem;border:none;border-radius:8px;background:rgba(255 255 255 / 0.05);color:var(--text-light);font-size:0.95rem;outline:none;transition:background 0.3s ease,box-shadow 0.3s ease;font-family:var(--font-body);}
+input:focus,textarea:focus,select:focus{background:rgba(255 255 255 / 0.1);box-shadow:0 0 8px var(--accent);}
+textarea{resize:none;height:70px;}
+button{width:100%;margin-top:1.5rem;padding:0.75rem;background:var(--accent);color:var(--bg);font-weight:600;font-size:1rem;border:none;border-radius:8px;cursor:pointer;transition:background 0.3s ease,transform 0.2s ease,box-shadow 0.3s ease;font-family:var(--font-body);}
+button:hover{background:var(--accent-hover);transform:translateY(-2px);box-shadow:0 4px 15px var(--accent-hover);}
+#successMessage{margin-top:1rem;font-size:0.85rem;color:#e0d9b8;text-align:center;display:none;font-style:italic;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+
+</style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h1>Secure Your Spot on the <span style="color: var(--accent-hover);">SŌL</span> Chain</h1>
+    <form id="whitelistForm">
+      <label for="name">Name / Pseudonym</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="twitter">X (Twitter) Username</label>
+      <input type="text" id="twitter" name="twitter" />
+
+      <label for="wallet">Wallet Address (Solana)</label>
+      <input type="text" id="wallet" name="wallet" required />
+
+      <label for="email">Email (optional)</label>
+      <input type="email" id="email" name="email" />
+
+      <label for="excitement">What excites you about SŌL?</label>
+      <textarea id="excitement" name="excitement"></textarea>
+
+      <label for="claim">Would you want to claim your scent IRL?</label>
+      <select id="claim" name="claim">
+        <option value="">--Select--</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+
+      <button type="submit">Join the SŌL Whitelist</button>
+    </form>
+
+    <div id="successMessage">
+      Thanks for joining. We’ll notify you soon—and maybe even surprise you with a preview gift.
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('whitelistForm');
+    const successMsg = document.getElementById('successMessage');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      successMsg.style.display = 'block';
+      form.reset();
+      setTimeout(() => successMsg.style.display = 'none', 6000);
+    });
+  </script>
+
+</body>
+</html>

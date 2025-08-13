@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SŌL — Soul of the Chain</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  
+  <!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<!-- AOS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+</head>
+<body>
+
+  <!-- HEADER -->
+<header class="site-header">
+  <div class="container header-container">
+
+    <!-- Logo -->
+    <div class="logo">
+      <a href="/">
+        <img src="images/logo.jpg" alt="SŌL Logo" />
+      </a>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="nav-desktop">
+      <ul class="nav-list">
+        <li><a href="#about-section">About</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#drop-tease">Drops</a></li>
+        <li><a href="#faq-section">FAQ</a></li>
+        <li><a href="signup.html" class="btn-primary">Join the Whitelist</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hamburger for Mobile -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </div>
+
+  <!-- Mobile Navigation (off-canvas) -->
+  <nav class="nav-mobile" id="navMobile">
+    <ul class="nav-list">
+      <li><a href="#about-section">About</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#drop-tease">Drops</a></li>
+      <li><a href="#faq-section">FAQ</a></li>
+      <li><a href="signup.html" class="btn-primary">Join the Whitelist</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<!-- HERO SECTION -->
+<section class="hero" style="background-image: url('images/bg-image.jpg');">
+  <div class="hero-overlay"></div> <!-- Gradient overlay -->
+
+  <div class="hero-content">
+    <h1>Own Your Scent. On-Chain.</h1>
+    <p>A luxury fragrance unlocked by Solana NFTs.<br>
+       Mint identity. Claim a moment.</p>
+
+    <div class="hero-ctas">
+      <a href="signup.html" class="btn-primary">Join the Whitelist</a>
+      <a href="https://x.com/soulofthechain" target="_blank" class="btn-secondary">Follow us on X</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ABOUT ------------
+
+----------- SECTION -->
+
+  <section class="about" id="about-section">
+  <!-- Block 1 -->
+  <div class="about-block">
+    <div class="about-text" data-aos="fade-up">
+      <h2>Mint Your Identity</h2>
+      <p>
+        <strong>SŌL</strong> 
+        Each drop starts with a Solana NFT—rich in scent story.
+      </p>
+    </div>
+    <div class="about-image" data-aos="fade-right" data-aos-easing="ease-out-back">
+      <img src="images/craftsmanship.jpg" alt="Luxury fragrance bottle" />
+    </div>
+  </div>
+
+  <!-- Block 2 -->
+  <div class="about-block reverse">
+    <div class="about-image"  data-aos="fade-left" data-aos-easing="ease-out-back">
+      <img src="images/about-main.jpg" alt="Perfume crafting process" />
+    </div>
+    <div class="about-text" data-aos="fade-up"> 
+      <h3>Unlock Your Scent</h3>
+      <p>
+        Redeem a high-end fragrance sample mailed to you.
+      </p>
+    </div>
+  </div>
+
+  <!-- Block 3 -->
+  <div class="about-block">
+    <div class="about-text" data-aos="fade-up">
+      <h3>Own the Experience</h3>
+      <p>
+        Access raffles, exclusive drops, and community events.
+      </p>
+    </div>
+    <div class="about-image" data-aos="fade-right" data-aos-easing="ease-out-back">
+      <img src="images/blockchain.jpg" alt="Blockchain art style" />
+    </div>
+  </div>
+</section>
+
+
+
+<!-- COUNTDOWM -->
+
+<!-- Drop Tease Section -->
+<section class="drop-tease" id="drop-tease">
+    <div class="container">
+        <h2>First Collection – Coming Soon</h2>
+
+        <!-- Countdown Timer -->
+        <div class="countdown" id="countdown">
+            <div class="time">
+                <span id="days">00</span>
+                <small>Days</small>
+            </div>
+            <div class="time">
+                <span id="hours">00</span>
+                <small>Hours</small>
+            </div>
+            <div class="time">
+                <span id="minutes">00</span>
+                <small>Minutes</small>
+            </div>
+            <div class="time">
+                <span id="seconds">00</span>
+                <small>Seconds</small>
+            </div>
+        </div>
+
+        <!-- CTA Email Capture -->
+        <form class="notify-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Notify Me</button>
+        </form>
+    </div>
+</section>
+
+
+<!-- FOOTER AND FAQ -->
+
+<!-- Tagline/Footer -->
+<!-- ===== Heavy Footer ===== -->
+<footer class="site-footer" id="site-footer">
+    <div class="footer-container">
+        
+        <!-- Brand / About -->
+        <div class="footer-section">
+            <h3>SŌL</h3>
+            <p>Soul of the Chain — Digital identity, artisan fragrance — built on Solana.</p>
+            <p>Where blockchain meets bespoke perfumery. Own the scent, own the moment.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Mint NFT</a></li>
+                <li><a href="#">Claim Physical</a></li>
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Support / Info -->
+        <div class="footer-section">
+            <h4>Support</h4>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Shipping Info</a></li>
+                <li><a href="#">Wallet Guide</a></li>
+                <li><a href="#">DAO Access</a></li>
+            </ul>
+        </div>
+
+        <!-- Socials -->
+        <div class="footer-section">
+            <h4>Connect</h4>
+            <div class="social-links">
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+                <a href="#">Discord</a>
+                <a href="#">Telegram</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 SŌL. All Rights Reserved. | Powered by Solana Blockchain</p>
+    </div>
+</footer>
+
+
+<!-- FAQ Section -->
+<section class="faq-section" id="faq-section">
+    <div class="container">
+        <h2>FAQ</h2>
+
+        <div class="faq-item">
+            <button class="faq-question">Isn’t this just digital?</button>
+            <div class="faq-answer">
+                <p>Nope—your NFT unlocks a physical sachet or 10 ml travel-size bottle claimed after mint.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">What chain do you use?</button>
+            <div class="faq-answer">
+                <p>We’re on Solana—for fast, low-cost, eco-friendly NFT drops.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Do I need a crypto wallet?</button>
+            <div class="faq-answer">
+                <p>Yes—wallets like Phantom or Solflare. We’ll guide you step-by-step. Click <a href="#">here</a> for guide.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">What’s included in the NFT?</button>
+            <div class="faq-answer">
+                <p>A limited edition visual, scent metadata, claim rights, and DAO-style access to future drops.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">How fast is shipping?</button>
+            <div class="faq-answer">
+                <p>Domestic shipments go out 4 weeks after mint, with global options rolling out Q4.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<script> AOS.init({ duration: 900, once: false }); </script>
+  <script src="js/main.js"></script>
+
+<script>
+
+  const hamburger = document.getElementById('hamburger');
+const navMobile = document.querySelector('.nav-mobile');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active'); // animate hamburger icon
+  navMobile.classList.toggle('active'); // slide menu in/out
+  document.body.style.overflow = navMobile.classList.contains('active') ? 'hidden' : '';
+});
+
+</script>
+
+
+</body>
+</html>
