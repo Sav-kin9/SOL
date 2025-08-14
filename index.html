@@ -173,7 +173,7 @@
         <!-- Brand / About -->
         <div class="footer-section">
             <h3>SŌL</h3>
-            <p>Soul of the Chain — Digital identity, artisan fragrance — built on Solana.</p>
+            <p>Soul of the Chain; Digital identity, artisan fragrance built on Solana.</p>
             <p>Where blockchain meets bespoke perfumery. Own the scent, own the moment.</p>
         </div>
 
@@ -227,21 +227,21 @@
         <div class="faq-item">
             <button class="faq-question">Isn’t this just digital?</button>
             <div class="faq-answer">
-                <p>Nope—your NFT unlocks a physical sachet or 10 ml travel-size bottle claimed after mint.</p>
+                <p>Nope! your NFT unlocks a physical sachet or 10 ml travel-size bottle claimed after mint.</p>
             </div>
         </div>
 
         <div class="faq-item">
             <button class="faq-question">What chain do you use?</button>
             <div class="faq-answer">
-                <p>We’re on Solana—for fast, low-cost, eco-friendly NFT drops.</p>
+                <p>We’re on Solana; for fast, low-cost, eco-friendly NFT drops.</p>
             </div>
         </div>
 
         <div class="faq-item">
             <button class="faq-question">Do I need a crypto wallet?</button>
             <div class="faq-answer">
-                <p>Yes—wallets like Phantom or Solflare. We’ll guide you step-by-step. Click <a href="#">here</a> for guide.</p>
+                <p>Yes! wallets like Phantom or Solflare. We’ll guide you step-by-step. Click <a href="#">here</a> for guide.</p>
             </div>
         </div>
 
@@ -261,6 +261,9 @@
     </div>
 </section>
 
+<button id="backToTop">
+  <img src="images/up-arrow.svg" alt="Back to top">
+</button>
 
 
 <script> AOS.init({ duration: 900, once: false }); </script>
@@ -276,6 +279,18 @@ hamburger.addEventListener('click', () => {
   navMobile.classList.toggle('active'); // slide menu in/out
   document.body.style.overflow = navMobile.classList.contains('active') ? 'hidden' : '';
 });
+
+// Show button after scrolling down 200px
+window.addEventListener("scroll", () => {
+  const btn = document.getElementById("backToTop");
+  btn.style.display = window.scrollY > 200 ? "block" : "none";
+});
+
+// Scroll to top smoothly
+document.getElementById("backToTop").addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
 
 </script>
 
