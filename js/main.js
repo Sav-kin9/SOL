@@ -121,3 +121,27 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+// Initialize AOS animations
+AOS.init({
+  duration: 800,
+  once: true
+});
+
+// GSAP hover pulse effect for step numbers
+document.querySelectorAll(".step").forEach(step => {
+  step.addEventListener("mouseenter", () => {
+    gsap.to(step.querySelector(".step-number"), {
+      scale: 1.2,
+      duration: 0.3,
+      ease: "power2.out"
+    });
+  });
+
+  step.addEventListener("mouseleave", () => {
+    gsap.to(step.querySelector(".step-number"), {
+      scale: 1,
+      duration: 0.3,
+      ease: "power2.out"
+    });
+  });
+});

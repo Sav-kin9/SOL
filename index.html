@@ -87,10 +87,27 @@
   <!-- Block 1 -->
   <div class="about-block">
     <div class="about-text" data-aos="fade-up">
-      <h2>Mint Your Identity</h2>
+      <h2>About SŌL - Soul of the Chain</h2>
       <p>
         <strong>SŌL</strong> 
-        Each drop starts with a Solana NFT—rich in scent story.
+        reimagines luxury fragrance for the digital age. 
+        We create limited-edition, 
+        small-batch perfumes whose ownership is represented and 
+        secured on-chain. 
+        Each SŌL NFT is more than a collectible image; 
+        it’s a claim to a handcrafted scent, 
+        a piece of cultural storytelling, 
+        and a dynamic digital identity that evolves with every drop you own.
+      </p>
+      <p>
+        Our work sits at the intersection of craft and code. 
+        We partner with boutique perfumers to develop narrative-driven scents, 
+        and we use Solana to mint verifiable, 
+        tradeable tokens that link directly to real-world fulfillment. 
+        Holders redeem physical bottles through a secure claim flow; 
+        their Scent Passport updates to reflect ownership, 
+        fusion history, and aura traits, 
+        making scent both personal and programmable.
       </p>
     </div>
     <div class="about-image" data-aos="fade-right" data-aos-easing="ease-out-back">
@@ -104,9 +121,12 @@
       <img src="images/about-main.jpg" alt="Perfume crafting process" />
     </div>
     <div class="about-text" data-aos="fade-up"> 
-      <h3>Unlock Your Scent</h3>
+      <h3>Culture That’s Tactile and Traceable</h3>
       <p>
-        Redeem a high-end fragrance sample mailed to you.
+        We build with intention: small runs, premium materials, and transparent provenance. SŌL is designed to appeal to collectors who value rarity and meaning, creators who want new channels for expression, and brands that want a replicable phygital model.
+      </p>
+      <p>
+        By proving a robust <em>mint → claim → fulfill</em> pattern on Solana, we’re creating a template other creators can reuse — expanding what Web3 can be for consumer goods.
       </p>
     </div>
   </div>
@@ -114,9 +134,12 @@
   <!-- Block 3 -->
   <div class="about-block">
     <div class="about-text" data-aos="fade-up">
-      <h3>Own the Experience</h3>
+      <h3>Join the Journey</h3>
       <p>
-        Access raffles, exclusive drops, and community events.
+        Be among the first to own a fragrance that lives on-chain and in real life. Every bottle is a bridge between digital culture and tangible craft — a scent story you can hold, display, and trade.
+      </p>
+      <p>
+        Join us if you care about culture that’s tactile and traceable — and experience a fragrance that’s both personal and programmable.
       </p>
     </div>
     <div class="about-image" data-aos="fade-right" data-aos-easing="ease-out-back">
@@ -125,6 +148,48 @@
   </div>
 </section>
 
+
+<!-- HOW IT WORKS SECTION -->
+<section id="how-it-works" class="how-it-works">
+  <div class="container">
+    <h2 data-aos="fade-up">How it works</h2>
+
+    <div class="steps">
+
+      <!-- Step 1 -->
+      <div class="step" data-aos="fade-right" data-aos-delay="100">
+        <div class="step-number">1</div>
+        <h3>Mint</h3>
+        <p>
+          Join a limited SŌL drop on Solana and mint a scent NFT.
+          Each token represents a unique fragrance edition and its on-chain provenance.
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step" data-aos="fade-left" data-aos-delay="200">
+        <div class="step-number">2</div>
+        <h3>Claim</h3>
+        <p>
+          After mint, holders redeem their NFT through our secure claim portal.
+          You submit shipping details off-chain; the NFT remains yours.
+        </p>
+      </div>
+
+      <!-- Step 3 (Optional future step) -->
+      <div class="step" data-aos="fade-right" data-aos-delay="300">
+        <div class="step-number">3</div>
+        <h3>Enjoy</h3>
+        <p>
+          Receive your exclusive fragrance delivered to your doorstep, backed by blockchain authenticity.
+        </p>
+      </div>
+
+    </div>
+  </div>            
+              <!-- Particle Background -->
+              <canvas id="particles-bg"></canvas>
+</section>
 
 
 <!-- COUNTDOWM -->
@@ -255,10 +320,10 @@
         <div class="faq-item">
             <button class="faq-question">How fast is shipping?</button>
             <div class="faq-answer">
-                <p>Domestic shipments go out 4 weeks after mint, with global options rolling out Q4.</p>
+              <p>Domestic shipments go out 4 weeks after mint, with global options rolling out Q4.</p>
             </div>
+          </div>
         </div>
-    </div>
 </section>
 
 <button id="backToTop">
@@ -267,8 +332,13 @@
 
 
 <script> AOS.init({ duration: 900, once: false }); </script>
-  <script src="js/main.js"></script>
 
+  <script src="js/main.js"></script>
+  <script src="particles.js"></script>
+  <!-- Three.js (Module version for ES6 import) -->
+  <script type="module" src="shader-bg.js"></script>
+
+  
 <script>
 
   const hamburger = document.getElementById('hamburger');
@@ -293,6 +363,21 @@ document.getElementById("backToTop").addEventListener("click", () => {
 
 
 </script>
+
+<!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
 </body>

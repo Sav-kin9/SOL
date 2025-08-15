@@ -61,7 +61,25 @@ a{text-decoration:none;color:inherit;transition:.3s}
 .about-block{display:flex;align-items:center;gap:3rem;max-width:var(--max-width);margin:auto;}
 .about-text p{color:#e4e4e4;line-height:1.7;}
 .about-image img{width:100%;border-radius:20px;object-fit:cover;box-shadow:0 10px 25px rgba(0,0,0,.4);}
-@media(max-width:768px){.about-block{flex-direction:column;text-align:center;}}
+@media(max-width:768px){.about-block{flex-direction:column;text-align:center;}.about-block.reverse{flex-direction:column-reverse;}}
+
+/* HOW IT WORKS SECTION */
+.how-it-works{background:#0e0e0e;color:#fff;padding:5rem 2rem;text-align:center;}
+.how-it-works h2{font-size:clamp(2rem, 4vw, 3rem);margin-bottom:3rem;position:relative;}
+.steps{display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:2rem;max-width:1100px;margin:auto;}
+.step{background:rgba(255, 255, 255, 0.05);padding:2rem;border-radius:16px;transition:transform 0.3s ease, box-shadow 0.3s ease;position:relative;}
+.step:hover{transform:translateY(-6px);box-shadow:0 10px 25px rgba(0, 0, 0, 0.4);}
+.step-number{background:#ff7f50;color:#fff;font-weight:bold;font-size:1.5rem;width:50px;height:50px;display:flex;align-items:center;justify-content:center;border-radius:50%;margin:0 auto 1rem;}
+.step h3{font-size:1.4rem;margin-bottom:0.8rem;}
+.step p{color:#ddd;line-height:1.6;}
+
+/* Gradient Background */
+.how-it-works{position:relative;background:linear-gradient(135deg, #0e0e0e, #1a1a1a);overflow:hidden;z-index:0;}
+.how-it-works::before{content:"";position:absolute;inset:0;background:linear-gradient(270deg,#ff7f50, #1e90ff, #8a2be2, #ff7f50);background-size:600% 600%;animation:moveGradient 20s ease infinite;opacity:0.07;z-index:-1;pointer-events:none;}
+
+@keyframes moveGradient {
+  0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}
+}
 
 /* ---------- DROP TEASE & COUNTDOWN ---------- */
 .drop-tease{background:linear-gradient(135deg,rgba(30,30,50,.95),rgba(10,10,20,.95)),url('../images/iconic.jpg') center/cover;color:#fff;padding:80px 20px;text-align:center;}
